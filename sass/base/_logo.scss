@@ -1,10 +1,10 @@
-.header-link {
+.header__link {
     text-decoration: none;
     opacity: 1;
     visibility: initial;
     @extend %transition;
 }
-.header-link.inactive {
+.header__link.inactive {
     opacity: 0;
     visibility: hidden
 }
@@ -13,11 +13,11 @@
     gap: 10px;
     @extend %cursor;
 }
-.logo-title {
+.logo__title {
     color: $color-primary;
     @extend %letter-space;
 }
-.logo-subtitle {
+.logo__subtitle {
     @include font(400, 1.3rem, 1.5rem);
     @extend %font-add;
     letter-spacing: 0.1em;
@@ -26,10 +26,10 @@
 }
 
 /*logo for pets*/
-.logo-title-pets {
+.logo__title-pets {
     color: $color-main-description;
 }
-.logo-subtitle-pets {
-    color: $color-button-phrase;
+.logo__subtitle-pets {
+    color: $color-btn-phrase;
 }
 /*logo for pets*/

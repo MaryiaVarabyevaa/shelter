@@ -90,10 +90,10 @@ const pets = [
 ]
 
 const hamburger = document.querySelector('.hamburger-pets');
-const navMenu = document.querySelector('.header-navigation-pets');
-const links = document.querySelectorAll('.navigation-link-pets')
+const navMenu = document.querySelector('.header__nav-pets');
+const links = document.querySelectorAll('.nav__link-pets')
 const shadow = document.querySelector('.shadow');
-const logo = document.querySelector('.header-link');
+const logo = document.querySelector('.header__link');
 const copyLogo = logo.cloneNode(true);
 
 /* Hamburger menu */

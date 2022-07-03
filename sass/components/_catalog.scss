@@ -1,7 +1,7 @@
-.wrapper-catalog {
+.catalog {
     background-color: $color-background;
 }
-.container-catalog {
+.catalog__container {
     padding: 80px 0 97px;
     @extend %flex;
     gap: 60px;
@@ -11,10 +11,10 @@
         gap: 42px;
     }
 }
-.catalog-title {
+.catalog__title {
     padding-left: 2px;
 }
-.catalog-title h2 {
+.catalog__title h2 {
     text-align: center;
     color: $color-paragraph-about;
     @extend %letter-space;
@@ -24,7 +24,7 @@
         max-width: 300px;
    }
 }
-.catalog-cards {
+.catalog__cards {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -42,7 +42,7 @@
     }
 }
 
-.wrapper-carousel {
+.carousel {
     max-width: 990px;
     max-height: 435px;
     overflow: hidden;
@@ -90,7 +90,7 @@
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
         background-color: $color-light;
         @extend %transition;
-        .button-more {
+        .btn-more {
             border: 2px solid $color-primary-light;
             background: $color-primary-light;
         }
@@ -114,12 +114,12 @@
     @extend %letter-space;
     color: $color-main-description;
 }
-.button-catalog a {
+.catalog__btn a {
     display: block;
 }
 
 /* style for pets */
-.container-catalog-pet {
+.catalog__container-pet {
     padding: 80px 0 100px;
     @extend %flex;
     gap: 60px;

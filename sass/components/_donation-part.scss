@@ -1,7 +1,7 @@
-.wrapper-donation {
+.donation-part {
     background-color: $color-background;
 }
-.container-donation {
+.donation-part__container {
     padding: 80px 142px 100px;
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +15,7 @@
         padding: 44px 0 42px;
     }
 }
-.image-donation {
+.donation-part__img {
     font-size: 0;
     padding-top: 10px;
     @include media-laptop {
@@ -23,7 +23,7 @@
         padding-top: 0;
     }
 }
-.image-donation img {
+.donation-part__img img {
     @include media-tablet {
         width: 260px;
         height: 136px;
@@ -35,7 +35,7 @@
         margin: 0 20px;
     }
 }
-.donation-description {
+.donation-part__description {
     @extend %flex;
     gap: 20px;
     max-width: 380px;
@@ -47,7 +47,7 @@
         align-items: center;
     }
 }
-.donation-title {
+.donation-part__title {
     @extend %letter-space;
     color: $color-main-description;
     @include media-tablet {
@@ -57,7 +57,7 @@
         max-width: 300px;
    }
 }
-.donation-text {
+.donation-part__text {
     @extend %font-primary;
     line-height: 110%;
     @extend %letter-space;
@@ -67,7 +67,7 @@
        letter-spacing: 0;
     }
 }
-.link-donation {
+.donation-part__link {
     text-decoration: none;
 }
 .bank-account {
@@ -93,7 +93,7 @@
         padding: 10px 14px;
     }
 }
-.donation-text-italic {
+.donation-part__text-italic {
     font-style: italic;
     font-size: 1.2rem;
     line-height: 1.8rem;

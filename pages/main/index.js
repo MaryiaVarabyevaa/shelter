@@ -1,8 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.header-navigation');
-const links = document.querySelectorAll('.navigation-link');
+const navMenu = document.querySelector('.header__nav');
+const links = document.querySelectorAll('.nav__link');
 const shadow = document.querySelector('.shadow');
-const logo = document.querySelector('.header-link');
+const logo = document.querySelector('.header__link');
 const copyLogo = logo.cloneNode(true);
 
 /* Hamburger menu */
@@ -170,11 +170,11 @@ function createCardTemplate() {
     const petName = document.createElement('h3');
     petName.classList.add('card-name');
     petName.innerText = `${pets[index].name}`;
-    const button = document.createElement('button');
-    button.classList.add('button', 'button-more');
-    button.innerText = 'Learn More'
+    const btn = document.createElement('btn');
+    btn.classList.add('btn', 'btn-more');
+    btn.innerText = 'Learn More'
 
-    card.append(petImage, petName, button);
+    card.append(petImage, petName, btn);
 
     return card;
 }

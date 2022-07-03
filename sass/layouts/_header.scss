@@ -1,7 +1,7 @@
 .common-wrapper {
     @extend %background;
 }
-.wrapper-header {
+.header__wrapper {
     display: flex;
     justify-content: space-between;  
     align-items: center;
@@ -19,7 +19,7 @@
     position: sticky;
     top: 0;
 }
-.wrapper-header-pets {
+.header__wrapper-pets {
     background-color: $color-light;
 }
 .wrapper-pets {

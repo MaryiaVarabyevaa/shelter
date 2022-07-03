@@ -1,4 +1,4 @@
-.header-navigation {
+.header__nav {
     padding: 0 3px 3px 0;
     @extend %transition;
     @include media-tablet {
@@ -6,14 +6,14 @@
         position: fixed;
         right: -100%;
         top: 0;
-        background-color: $color-button-phrase;
+        background-color: $color-btn-phrase;
         text-align: center;
         width: 320px;
         height: 100%;
         z-index: 1000;
         display: flex;
         flex-direction: column;
-        & .header-link {
+        & .header__link {
             padding-top: 30px;
             align-self: flex-start;
             padding-left: 10px;
@@ -21,7 +21,7 @@
         }
     }
 }
-.navigation {
+.nav {
     display: flex;
     gap: 35px;
     list-style-type: none;
@@ -34,12 +34,12 @@
         padding-top: 248px;
     }
 }
-.navigation-link {
+.nav__link {
     @include font(400, 1.5rem, 160%);
     @extend %font-add;
     & a{
         text-decoration: none;
-        color: $color-paragraph-hero;
+        color: $color-paragraph-start-part;
         display: inline-block;
     }
     @include media-tablet {
@@ -61,7 +61,7 @@
 .underlined-link a{
     color: $color-hover-link;
 }
-.navigation-main {
+.nav-main {
     >:not(.underlined-link) {
         & a {
             &:after {
@@ -78,8 +78,8 @@
     } 
 }
 
-/*navigation for pets*/
-.header-navigation-pets {
+/*nav for pets*/
+.header__nav-pets {
     padding: 0 3px 3px 0;
     @extend %transition;
     display: flex;
@@ -94,7 +94,7 @@
         width: 320px;
         height: 100%;
         z-index: 1000;
-        & .header-link {
+        & .header__link {
             padding-top: 30px;
             align-self: flex-start;
             padding-left: 10px;
@@ -106,7 +106,7 @@
     right: 0;
     @extend %transition;
 }
-.navigation-link-pets {
+.nav__link-pets {
     @include font(400, 1.5rem, 160%);
     @extend %font-add;
     & a{
@@ -125,9 +125,9 @@
     }
 }
 .underlined-link-pets a {
-    color: $color-button-phrase;
+    color: $color-btn-phrase;
 }
-.navigation-pets {
+.nav-pets {
     >:not(.underlined-link-pets) {
         & a {
             &:after {
@@ -138,10 +138,10 @@
                     color: black;
             }
             &:hover {
-                color: $color-button-phrase;
+                color: $color-btn-phrase;
             }
         }
     } 
 }
 
-/*navigation for pets*/
+/*nav for pets*/
