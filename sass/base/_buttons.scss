@@ -1,0 +1,117 @@
+.button {
+    @include font(400, 1.7rem, 130%);
+    @extend %font-primary;
+    @extend %letter-space;
+    color: $color-button-phrase;
+    padding: 15px 42px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    @extend %cursor;
+    &:hover {
+        @extend %transition;
+    }
+}
+.button-hero {
+    text-decoration: none;
+    background-color: $color-primary;
+    max-width: 207px;
+    &:hover {
+        background-color: $color-primary-light;
+        @extend %transition;
+    }
+    @include media-laptop {
+        align-self: center;
+    }
+}
+.button-direction {
+    background-color: inherit;
+    padding: 13px 17px;
+    border: 2px solid $color-primary;
+    max-height: 53px;
+    &:hover {
+        border: 2px solid $color-primary-light;
+        background: $color-primary-light;
+    }
+    & img {
+        padding-bottom: 3px;
+    }
+    @include media-tablet {
+        &:nth-child(1) {
+            order: 1;
+        }
+        &:last-child {
+            order: 10;
+        }
+    }
+}
+.button-more {
+    padding: 13px 42px;
+    border: 2px solid $color-primary;
+    background-color: $color-hover-link;
+    max-width: 187px;
+    @extend %transition;
+}
+.button-rest {
+    padding: 16px 45px;
+    background-color: $color-primary;
+    text-decoration: none;
+    &:hover {
+        background: $color-primary-light;
+    }
+}
+
+/*buttons for pets*/
+
+.btn-direction-pets {
+    background: transparent;
+    border-radius: 100px;
+    @include font(400, 2.0rem, 115%);
+    color: $color-button-phrase;
+    @include media-laptop {
+        margin-top: 10px;
+    }
+    @include media-tablet {
+        margin: 0;
+    }
+}
+.btn-direction-pets:nth-child(1), .btn-direction-pets:nth-child(5) {
+    padding: 12px 10px 13px 10px;
+}
+.btn-direction-pets:nth-child(2), .btn-direction-pets:nth-child(4) {
+    padding: 12px 17px 13px 17px;
+}
+.btn-direction-pets:nth-child(3) {
+    padding: 14px 22px 15px 21px;
+    background-color: $color-primary;
+    cursor: default;
+}
+.btn-direction-pets:nth-child(1), .btn-direction-pets:nth-child(2) {
+    border: 2px solid $color-paragraph-hero;
+    color: $color-paragraph-hero;
+    cursor: default;
+}
+.btn-direction-pets:nth-child(4), .btn-direction-pets:nth-child(5) {
+    border: 2px solid $color-primary;
+    color: $color-button-phrase;
+    &:hover {
+        @extend %transition;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
+}
+
+/*buttons for pets*/
+
+.button-close {
+    border: 2px solid $color-primary;
+    padding: 16px 18px;
+    border-radius: 100px;
+    background-color: inherit;
+    @extend %cursor;
+    @extend %transition;
+    &:hover {
+        @extend %cursor;
+        background-color: $color-primary;
+    }
+}

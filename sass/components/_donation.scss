@@ -1,0 +1,104 @@
+.wrapper-donation {
+    background-color: $color-background;
+}
+.container-donation {
+    padding: 80px 142px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    @include media-laptop {
+        gap: 60px;
+    }
+    @include media-tablet {
+        gap: 42px;
+        padding: 44px 0 42px;
+    }
+}
+.image-donation {
+    font-size: 0;
+    padding-top: 10px;
+    @include media-laptop {
+        order: 2;
+        padding-top: 0;
+    }
+}
+.image-donation img {
+    @include media-tablet {
+        width: 260px;
+        height: 136px;
+    }
+    @include media-tablet {
+        margin: 0 25px;
+    }
+    @include media-mobile {
+        margin: 0 20px;
+    }
+}
+.donation-description {
+    @extend %flex;
+    gap: 20px;
+    max-width: 380px;
+    @include media-laptop {
+        order: 1;
+    }
+    @include media-tablet {
+        margin: 0 10px;
+        align-items: center;
+    }
+}
+.donation-title {
+    @extend %letter-space;
+    color: $color-main-description;
+    @include media-tablet {
+        @include font(400, 2.5rem, 130%);
+        padding-right: 0;
+        text-align: center;
+        max-width: 300px;
+   }
+}
+.donation-text {
+    @extend %font-primary;
+    line-height: 110%;
+    @extend %letter-space;
+    color: $color-main-description;
+    @include media-tablet {
+       @include font(400, 1.5rem, 160%);
+       letter-spacing: 0;
+    }
+}
+.link-donation {
+    text-decoration: none;
+}
+.bank-account {
+    display: flex;
+    gap: 15px;
+    @extend %font-primary;
+    background-color: $color-primary;
+    padding: 10px 15px;
+    font-size: 2.0rem;
+    line-height: 115%;
+    color: $color-main-description;
+    @extend %letter-space;
+    border-radius: 9px;
+    max-width: 350px;
+    &:hover {
+        @extend %transition;
+        background: $color-primary-light;
+    }
+    @include media-tablet {
+        max-width: 281px;
+        @include font(400, 1.5rem, 110%);
+        align-items: center;
+        padding: 10px 14px;
+    }
+}
+.donation-text-italic {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: $color-description-italic;
+    @include media-tablet {
+        text-align: justify;
+    }
+}

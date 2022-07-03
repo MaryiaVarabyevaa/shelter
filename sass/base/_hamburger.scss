@@ -1,0 +1,73 @@
+
+@mixin hamburger-line ($color) {
+    content: "";
+    display: inline-block;
+    position: absolute; 
+    background: $color;
+    height: 2px;
+    width: 100%;
+}
+.hamburger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    @extend %cursor;
+    @extend %transition;
+    @include media-tablet {
+        display: inline-block;
+        z-index: 1100;
+    }
+    &:before {
+        @include hamburger-line($color-primary);
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        @include hamburger-line($color-primary);
+        bottom: 0;
+        left: 0;
+    }
+}
+.open {
+    transform: rotate(-90deg);
+    @extend %transition;
+}
+.hamburger__line {
+    @include hamburger-line($color-primary);
+    top: calc(50% - 1px);
+    left: 0;
+    @extend %transition;
+}
+.block {
+    overflow: hidden;
+}
+
+.hamburger-pets {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    @extend %cursor;
+    @extend %transition;
+    @include media-tablet {
+        display: inline-block;
+        z-index: 1100;
+    }
+    &:before {
+        @include hamburger-line($color-dark);
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        @include hamburger-line($color-dark);
+        bottom: 0;
+        left: 0;
+    }
+}
+.hamburger-pets__line {
+    @include hamburger-line($color-dark);
+    top: calc(50% - 1px);
+    left: 0;
+    @extend %transition;
+}
