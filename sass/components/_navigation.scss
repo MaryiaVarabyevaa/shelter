@@ -79,7 +79,7 @@
 }
 
 /*nav for pets*/
-.header__nav-pets {
+.header-pets__nav {
     padding: 0 3px 3px 0;
     @extend %transition;
     display: flex;
@@ -106,7 +106,7 @@
     right: 0;
     @extend %transition;
 }
-.nav__link-pets {
+.nav-pets__link {
     @include font(400, 1.5rem, 160%);
     @extend %font-add;
     & a{

@@ -63,7 +63,7 @@
 
 /*btns for pets*/
 
-.btn-direction-pets {
+.btn-pets-direction {
     background: transparent;
     border-radius: 100px;
     @include font(400, 2.0rem, 115%);
@@ -75,23 +75,23 @@
         margin: 0;
     }
 }
-.btn-direction-pets:nth-child(1), .btn-direction-pets:nth-child(5) {
+.btn-pets-direction:nth-child(1), .btn-pets-direction:nth-child(5) {
     padding: 12px 10px 13px 10px;
 }
-.btn-direction-pets:nth-child(2), .btn-direction-pets:nth-child(4) {
+.btn-pets-direction:nth-child(2), .btn-pets-direction:nth-child(4) {
     padding: 12px 17px 13px 17px;
 }
-.btn-direction-pets:nth-child(3) {
+.btn-pets-direction:nth-child(3) {
     padding: 14px 22px 15px 21px;
     background-color: $color-primary;
     cursor: default;
 }
-.btn-direction-pets:nth-child(1), .btn-direction-pets:nth-child(2) {
+.btn-pets-direction:nth-child(1), .btn-pets-direction:nth-child(2) {
     border: 2px solid $color-paragraph-start-part;
     color: $color-paragraph-start-part;
     cursor: default;
 }
-.btn-direction-pets:nth-child(4), .btn-direction-pets:nth-child(5) {
+.btn-pets-direction:nth-child(4), .btn-pets-direction:nth-child(5) {
     border: 2px solid $color-primary;
     color: $color-btn-phrase;
     &:hover {
