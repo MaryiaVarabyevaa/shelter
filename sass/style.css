@@ -3,7 +3,7 @@
   background: url(.././assets/img/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
-.popup__body.popup__body_open, .popup__body, .popup, .shadow, .bank-account:hover, .active-pet, .header-pets__nav, .active, .nav, .header__nav, .card:hover, .card-pet:hover, .hamburger-pets__line, .hamburger-pets, .hamburger__line, .open, .hamburger, .btn-close, .btn-pets-direction:nth-child(4):hover, .btn-pets-direction:nth-child(5):hover, .btn-more, .start-part__btn:hover, .btn:hover, .header__link, .nav-pets > :not(.underlined-link-pets) a:after, .nav-main > :not(.underlined-link) a:after, .underlined-link::after, .underlined-link-pets::after {
+.popup__body.popup__body_open, .popup__body, .popup, .shadow, .bank-account:hover, .active-pet, .header-pets__nav, .active, .nav, .header__nav, .card:hover, .card-pet:hover, .hamburger-pets__line, .hamburger-pets, .hamburger__line, .open, .hamburger, .btn-close, .active:hover, .btn-more, .start-part__btn:hover, .btn:hover, .header__link, .nav-pets > :not(.underlined-link-pets) a:after, .nav-main > :not(.underlined-link) a:after, .underlined-link::after, .underlined-link-pets::after {
   transition: all 0.8s ease-in-out;
 }
 
@@ -218,17 +218,17 @@ p {
   cursor: default;
 }
 
-.btn-pets-direction:nth-child(1), .btn-pets-direction:nth-child(2) {
+.inactive {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
   cursor: default;
 }
 
-.btn-pets-direction:nth-child(4), .btn-pets-direction:nth-child(5) {
+.active {
   border: 2px solid #F1CDB3;
   color: #292929;
 }
-.btn-pets-direction:nth-child(4):hover, .btn-pets-direction:nth-child(5):hover {
+.active:hover {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
