@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
     <link rel="stylesheet" href="../../sass/style.css">
-    <link rel="shortcut icon" href="../../assets/img/favicons.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/img/fav.png" type="image/x-icon">
 </head>
 <body>
     <header class="header header-pets">
         <div class="shadow"></div>
-        <div class="header__wrapper-pets" id="header">
+        <div class="header-pets__wrapper" id="header">
             <div class="wrapper header__wrapper wrapper-pets">
                 <a href="../main/index.html" class="header__link">
                     <div class="logo" >
-                        <h1 class="logo__title logo__title-pets">Cozy House</h1>
-                        <p class="logo__subtitle logo__subtitle-pets">Shelter for pets in Boston</p>
+                        <h1 class="logo__title logo-pets__title">Cozy House</h1>
+                        <p class="logo__subtitle logo-pets__subtitle">Shelter for pets in Boston</p>
                     </div>
                 </a>
-                <nav class="header__nav-pets">
+                <nav class="header-pets__nav">
                     <ul class="nav nav-pets">
-                        <li class="nav__link-pets"><a href="../main/index.html">About the shelter</a></li>
-                        <li class="nav__link-pets underlined-link-pets"><a href="#">Our pets</a></li>
-                        <li class="nav__link-pets"><a href="../main/index.html#help">Help the shelter</a></li>
-                        <li class="nav__link-pets"><a href="#contacts">Contacts</a></li>
+                        <li class="nav-pets__link"><a href="../main/index.html">About the shelter</a></li>
+                        <li class="nav-pets__link underlined-link-pets"><a href="#">Our pets</a></li>
+                        <li class="nav-pets__link"><a href="../main/index.html#help">Help the shelter</a></li>
+                        <li class="nav-pets__link"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
                 <span class="hamburger-pets">
@@ -36,58 +36,18 @@
     <main class="main">
         <div class="catalog">
             <div class="wrapper">
-                <div class="catalog__container-pet">
+                <div class="catalog-pet__container">
                     <div class="catalog__title">
                         <h2>Our friends who <br> are looking for a house</h2>
                     </div>
                     <div class="box-of-cards-pets" id="wrapper">
-                            <div class="card-pet" data-pet = "Katrine">
-                                <img src="../../assets/img/pets/pets-katrine.png" alt="Cat" class="card-image">
-                                <h3 class="card-title">Katrine</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Jennifer">
-                                <img src="../../assets/img/pets/pets-jennifer.png" alt="Cat" class="card-image">
-                                <h3 class="card-title">Jennifer</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Woody">
-                                <img src="../../assets/img/pets/pets-woody.png" alt="Dog" class="card-image">
-                                <h3 class="card-title">Woody</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Sophia">
-                                <img src="../../assets/img/pets/pets-sophia.png" alt="Dog" class="card-image">
-                                <h3 class="card-title">Sophia</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Timmy">
-                                <img src="../../assets/img/pets/pets-timmy.png" alt="Cat" class="card-image">
-                                <h3 class="card-title">Timmy</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Charly">
-                                <img src="../../assets/img/pets/pets-charly.png" alt="Dog" class="card-image">
-                                <h3 class="card-title">Charly</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Scarlett">
-                                <img src="../../assets/img/pets/pets-scarlet.png" alt="Dog" class="card-image">
-                                <h3 class="card-title">Scarlett</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
-                            <div class="card-pet" data-pet="Freddie">
-                                <img src="../../assets/img/pets/pets-freddie.png" alt="Cat" class="card-image">
-                                <h3 class="card-title">Freddie</h3>
-                                <btn class="btn btn-more">Learn more</btn>
-                            </div>
                     </div>
-                    <div class="catalog__btn-pets">
-                        <btn class="btn btn-direction-pets" disabled>&lt;&lt;</btn>
-                        <btn class="btn btn-direction-pets" disabled>&lt;</btn>
-                        <btn class="btn btn-direction-pets">1</btn>
-                        <btn class="btn btn-direction-pets">&gt;</btn>
-                        <btn class="btn btn-direction-pets">&gt;&gt;</btn>
+                    <div class="catalog-pets__btn">
+                        <btn class="btn btn-pets-direction inactive">&lt;&lt;</btn>
+                        <btn class="btn btn-pets-direction inactive">&lt;</btn>
+                        <btn class="btn btn-pets-direction">1</btn>
+                        <btn class="btn btn-pets-direction active">&gt;</btn>
+                        <btn class="btn btn-pets-direction active">&gt;&gt;</btn>
                     </div>
                 </div>
             </div>
