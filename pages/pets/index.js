@@ -207,21 +207,13 @@ function getRandomIndex() {
 let arr = [];
 
 function createArr() {
-  if (screen.width < 768) {
-    for (let i = 0; i < 24; i++) {
-      let index = getRandomIndex();
-      arr.push(pets[index]);
-    }
-  } else if (screen.width >= 768 && screen.width < 1280) {
-    for (let i = 0; i < 48; i++) {
-      let index = getRandomIndex();
-      arr.push(pets[index]);
-    }
-  } else if (screen.width >= 1280) {
-    for (let i = 0; i < 64; i++) {
-      let index = getRandomIndex();
-      arr.push(pets[index]);
-    }
+  let x;
+  if (screen.width < 768) x = 24;
+  else if (screen.width >= 768 && screen.width < 1280) x = 48;
+  else if (screen.width >= 1280) x = 64;
+  for (let i = 0; i < x; i++) {
+    let index = getRandomIndex();
+    arr.push(pets[index]);
   }
   return arr;
 }
@@ -251,23 +243,18 @@ function createCards() {
   let card1 = createCardTemplate(0);
   let card2 = createCardTemplate(1);
   let card3 = createCardTemplate(2);
+  let card4 = createCardTemplate(3);
+  let card5 = createCardTemplate(4);
+  let card6 = createCardTemplate(5);
+  let card7 = createCardTemplate(6);
+  let card8 = createCardTemplate(7);
   if (screen.width < 768) {
     wrapperCards.append(card1, card2, card3);
   }
   if (screen.width >= 768 && screen.width < 1280) {
-    let card4 = createCardTemplate(3);
-    let card5 = createCardTemplate(4);
-    let card6 = createCardTemplate(5);
-
     wrapperCards.append(card1, card2, card3, card4, card5, card6);
   }
   if (screen.width >= 1280) {
-    let card4 = createCardTemplate(3);
-    let card5 = createCardTemplate(4);
-    let card6 = createCardTemplate(5);
-    let card7 = createCardTemplate(6);
-    let card8 = createCardTemplate(7);
-
     wrapperCards.append(card1, card2, card3, card4, card5, card6, card7, card8);
   }
 }
