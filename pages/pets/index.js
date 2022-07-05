@@ -212,8 +212,18 @@ function createArr() {
       let index = getRandomIndex();
       arr.push(pets[index]);
     }
-    return arr;
+  } else if (screen.width >= 768 && screen.width < 1280) {
+    for (let i = 0; i < 48; i++) {
+      let index = getRandomIndex();
+      arr.push(pets[index]);
+    }
+  } else if (screen.width >= 1280) {
+    for (let i = 0; i < 64; i++) {
+      let index = getRandomIndex();
+      arr.push(pets[index]);
+    }
   }
+  return arr;
 }
 createArr();
 console.log(arr);
@@ -237,11 +247,32 @@ function createCardTemplate(index) {
   return card;
 }
 
-let card1 = createCardTemplate(0);
-let card2 = createCardTemplate(1);
-let card3 = createCardTemplate(2);
+function createCards() {
+  let card1 = createCardTemplate(0);
+  let card2 = createCardTemplate(1);
+  let card3 = createCardTemplate(2);
+  if (screen.width < 768) {
+    wrapperCards.append(card1, card2, card3);
+  }
+  if (screen.width >= 768 && screen.width < 1280) {
+    let card4 = createCardTemplate(3);
+    let card5 = createCardTemplate(4);
+    let card6 = createCardTemplate(5);
 
-wrapperCards.append(card1, card2, card3);
+    wrapperCards.append(card1, card2, card3, card4, card5, card6);
+  }
+  if (screen.width >= 1280) {
+    let card4 = createCardTemplate(3);
+    let card5 = createCardTemplate(4);
+    let card6 = createCardTemplate(5);
+    let card7 = createCardTemplate(6);
+    let card8 = createCardTemplate(7);
+
+    wrapperCards.append(card1, card2, card3, card4, card5, card6, card7, card8);
+  }
+}
+
+createCards();
 
 let imgs = document.querySelectorAll(".card-image");
 let titles = document.querySelectorAll(".card-title");
@@ -249,8 +280,12 @@ let cards = document.querySelectorAll(".card-pet");
 
 function changeNextCard() {
   if (+btnNum.innerHTML <= 7) {
-    let index = +btnNum.innerHTML * 3;
-    for (let i = 0; i < 3; i++) {
+    let x;
+    if (screen.width < 768) x = 3;
+    else if (screen.width >= 768 && screen.width < 1280) x = 6;
+    else if (screen.width >= 1280) x = 8;
+    let index = +btnNum.innerHTML * x;
+    for (let i = 0; i < x; i++) {
       imgs[i].src = `${arr[index].image}`;
       titles[i].innerHTML = `${arr[index].name}`;
       cards[i].setAttribute("data-pet", `${arr[index].name}`);
@@ -261,8 +296,19 @@ function changeNextCard() {
 
 function changePrevCard() {
   if (+btnNum.innerHTML >= 2) {
-    let index = +btnNum.innerHTML * 3 - 6;
-    for (let i = 0; i < 3; i++) {
+    let index;
+    let x;
+    if (screen.width < 768) {
+      index = +btnNum.innerHTML * 3 - 6;
+      x = 3;
+    } else if (screen.width >= 768 && screen.width < 1280) {
+      index = +btnNum.innerHTML * 6 - 12;
+      x = 6;
+    } else if (screen.width >= 1280) {
+      index = +btnNum.innerHTML * 8 - 16;
+      x = 8;
+    }
+    for (let i = 0; i < x; i++) {
       imgs[i].src = `${arr[index].image}`;
       titles[i].innerHTML = `${arr[index].name}`;
       cards[i].setAttribute("data-pet", `${arr[index].name}`);
@@ -272,8 +318,12 @@ function changePrevCard() {
 }
 
 function changeCardLast() {
-  let index = arr.length - 3;
-  for (let i = 0; i < 3; i++) {
+  let x;
+  if (screen.width < 768) x = 3;
+  else if (screen.width >= 768 && screen.width < 1280) x = 6;
+  else if (screen.width >= 1280) x = 8;
+  let index = arr.length - x;
+  for (let i = 0; i < x; i++) {
     imgs[i].src = `${arr[index].image}`;
     titles[i].innerHTML = `${arr[index].name}`;
     cards[i].setAttribute("data-pet", `${arr[index].name}`);
@@ -282,7 +332,11 @@ function changeCardLast() {
 }
 
 function changeCardFirst() {
-  for (let i = 0; i < 3; i++) {
+  let x;
+  if (screen.width < 768) x = 3;
+  else if (screen.width >= 768 && screen.width < 1280) x = 6;
+  else if (screen.width >= 1280) x = 8;
+  for (let i = 0; i < x; i++) {
     imgs[i].src = `${arr[i].image}`;
     titles[i].innerHTML = `${arr[i].name}`;
     cards[i].setAttribute("data-pet", `${arr[i].name}`);

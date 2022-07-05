@@ -92,11 +92,6 @@
     color: $color-paragraph-start-part;
     cursor: default;
 }
-// .btn-pets-direction:nth-child(1), .btn-pets-direction:nth-child(2) {
-//     border: 2px solid $color-paragraph-start-part;
-//     color: $color-paragraph-start-part;
-//     cursor: default;
-// }
 
 .active {
     border: 2px solid $color-primary;
@@ -107,16 +102,7 @@
         border: 2px solid $color-primary-light;
     }
 }
-// .btn-pets-direction:nth-child(4),
-// .btn-pets-direction:nth-child(5) {
-//     border: 2px solid $color-primary;
-//     color: $color-btn-phrase;
-//     &:hover {
-//         @extend %transition;
-//         background-color: $color-primary-light;
-//         border: 2px solid $color-primary-light;
-//     }
-// }
+
 
 /*btns for pets*/
 
