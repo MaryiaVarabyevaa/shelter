@@ -1,0 +1,169 @@
+.catalog {
+    background-color: $color-background;
+}
+.catalog__container {
+    padding: 80px 0 97px;
+    @extend %flex;
+    gap: 60px;
+    align-items: center;
+    @include media-tablet {
+        padding: 42px 0 38px;
+        gap: 42px;
+    }
+}
+.catalog__title {
+    padding-left: 2px;
+}
+.catalog__title h2 {
+    text-align: center;
+    color: $color-paragraph-about;
+    @extend %letter-space;
+    @include media-tablet {
+        @include font(400, 2.5rem, 130%);
+        text-align: center;
+        max-width: 300px;
+   }
+}
+.catalog__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 53px;
+    position: relative;
+    @include media-laptop {
+        gap: 12px;
+    }
+    @include media-tablet {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 270px;
+        row-gap: 20px;
+        column-gap: 80px;
+    }
+}
+
+.carousel {
+    max-width: 990px;
+    max-height: 435px;
+    overflow: hidden;
+    @include media-laptop {
+        max-width: 580px;
+    }
+}
+.box-of-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+    position: relative;
+    left: -1080px;
+    width: 3150px;
+    @include media-laptop {
+        flex-wrap: nowrap;
+        width: 580px;
+        gap: 40px;
+        left: 0px;
+    }
+    @include media-tablet {
+        flex-wrap: nowrap;
+        width: 270px;
+    }
+}
+.item {
+    display: flex;
+    gap: 90px;
+    @include media-laptop {
+        gap: 40px;
+    }
+}
+.card, .card-pet {
+    @extend %flex;
+    align-items: center;
+    gap: 30px;
+    background-color: $color-hover-link;
+    padding-bottom: 30px;
+    border-radius: 9px;
+    @extend %cursor;
+    &:hover {
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+        background-color: $color-light;
+        @extend %transition;
+        .btn-more {
+            border: 2px solid $color-primary-light;
+            background: $color-primary-light;
+        }
+    }
+   
+}
+.card {
+    @include media-laptop {
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+    @include media-tablet {
+        order: -1;
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+.card h3, .card-pet h3 {
+    @extend %letter-space;
+    color: $color-main-description;
+}
+.catalog__btn a {
+    display: block;
+}
+
+/* style for pets */
+.catalog-pet__container {
+    padding: 80px 0 100px;
+    @extend %flex;
+    gap: 60px;
+    align-items: center;
+    @include media-laptop {
+        padding-bottom: 76px;
+        gap: 30px;
+    }
+    @include media-tablet {
+        gap: 42px;
+        padding: 42px 0;
+    }
+}
+.box-of-cards-pets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    // position: relative;
+    @include media-laptop {
+        max-width: 580px;
+    }
+    @include media-tablet {
+        max-width: 270px;
+    }
+    
+ }
+.card-pet {
+    @include media-laptop {
+        max-width: 580px;
+        &:nth-child(7), &:nth-child(8) {
+            display: none;
+        }
+    }
+    @include media-tablet {
+        margin: 0 45px;
+        &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+            display: none;
+        }
+    }
+    @include media-mobile {
+        margin: 0 15px;
+    }  
+}

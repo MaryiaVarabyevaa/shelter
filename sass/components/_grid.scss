@@ -1,0 +1,48 @@
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 120px;
+    row-gap: 55px;
+    padding: 0 65px;
+    @include media-laptop {
+       align-self: center;
+       padding: 0;
+       column-gap: 60px;
+       row-gap: 55px;
+       max-width: 760px;
+    }
+    @include media-tablet {
+        justify-content:left;
+        max-width: 290px;
+        gap: 30px;
+    }
+}
+.items div {
+    @extend %flex;
+    align-items: center;
+    gap: 30px;
+    @include media-laptop {
+        flex-basis: 170px;
+     }
+     @include media-tablet {
+        gap: 20px;
+        flex-basis: 130px;
+    }
+}
+.items div img {
+    @include media-tablet {
+        width: 50px;
+        height: 50px
+    };
+}
+.items div p {
+    @include font(400, 2.0rem, 115%);
+    @extend %font-primary;
+    @extend %letter-space;
+    color: $color-main-description;
+    @include media-tablet {
+        @include font(400, 1.5rem, 110%);
+    }
+}

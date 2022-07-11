@@ -1,0 +1,35 @@
+.common-wrapper {
+    @extend %background;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding-top: 60px;
+    @include media-laptop {
+        padding-top: 30px;
+    }
+    @include media-tablet {
+        padding-right: 53px;
+    }
+}
+
+/* header for pets */
+.header-pets {
+    position: sticky;
+    top: 0;
+}
+.header-pets__wrapper {
+    background-color: $color-light;
+}
+.wrapper-pets {
+    padding: 30px 40px;  
+    @include media-laptop {
+        padding: 30px;
+    }  
+    @include media-tablet {
+        padding: 30px 50px 30px 10px;
+    }
+}
+ 
+/* header for pets */

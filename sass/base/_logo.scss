@@ -1,0 +1,35 @@
+.header__link {
+    text-decoration: none;
+    opacity: 1;
+    visibility: initial;
+    @extend %transition;
+}
+.header__link.inactive {
+    opacity: 0;
+    visibility: hidden
+}
+.logo {
+    @extend %flex;
+    gap: 10px;
+    @extend %cursor;
+}
+.logo__title {
+    color: $color-primary;
+    @extend %letter-space;
+}
+.logo__subtitle {
+    @include font(400, 1.3rem, 1.5rem);
+    @extend %font-add;
+    letter-spacing: 0.1em;
+    color: $color-light;
+    padding-left: 5px;
+}
+
+/*logo for pets*/
+.logo-pets__title {
+    color: $color-main-description;
+}
+.logo-pets__subtitle {
+    color: $color-btn-phrase;
+}
+/*logo for pets*/

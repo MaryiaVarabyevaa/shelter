@@ -1,0 +1,8 @@
+
+.catalog-pets__btn {
+    display: flex;
+    gap: 20px;
+    @include media-tablet {
+        gap: 10px;
+    }
+}
