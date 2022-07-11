@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-shadow */
@@ -145,7 +146,6 @@ function random() {
   return Math.floor(Math.random() * (copyObject.length - 1));
 }
 
-// eslint-disable-next-line consistent-return
 function getRandomIndex() {
   if (copyObject.length === 1) {
     copyObject.splice(i, b);
@@ -179,6 +179,7 @@ function createCardTemplate() {
   card.append(petImage, petName, btn);
   return card;
 }
+
 if (screen.width >= 1280) {
   const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");

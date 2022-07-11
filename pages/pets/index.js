@@ -171,6 +171,7 @@ popup.addEventListener("click", (event)=> {
 
 closeBtn.addEventListener("click", closePopup);
 
+
 /* popups */
 
 /* pagination */
@@ -181,12 +182,16 @@ const btnNum = document.querySelectorAll(".btn-pets-direction")[2];
 const btnNext = document.querySelectorAll(".btn-pets-direction")[3];
 const btnLast = document.querySelectorAll(".btn-pets-direction")[4];
 
+let imgs = document.querySelectorAll(".card-image");
+let titles = document.querySelectorAll(".card-title");
+let cards = document.querySelectorAll(".card-pet");
+
 let copyObject = pets.slice();
 let i = 0;
 let b = 0;
 
 function random() {
-  return Math.floor(Math.random() * (copyObject.length - 1));
+  return Math.floor(Math.random() * (copyObject.length));
 }
 function getRandomIndex() {
   if (copyObject.length === 1) {
@@ -200,7 +205,9 @@ function getRandomIndex() {
   i = index;
   b = 1;
   for (let i = 0; i < pets.length; i++) {
-    if (copyObject[index].name === pets[i].name) return i;
+    if (copyObject[index].name === pets[i].name) {
+      return i;
+    }
   }
 }
 
@@ -260,10 +267,6 @@ function createCards() {
 }
 
 createCards();
-
-let imgs = document.querySelectorAll(".card-image");
-let titles = document.querySelectorAll(".card-title");
-let cards = document.querySelectorAll(".card-pet");
 
 function changeNextCard() {
   if (+btnNum.innerHTML <= 7) {

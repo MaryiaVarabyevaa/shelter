@@ -1,10 +1,10 @@
 @keyframes move-right {
     from {left: -1080px;} 
-    to {left: -2161px;}
+    to {left: -2160px;}
   } 
 .transition-right {
     animation-name: move-right;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
   
 @keyframes move-left {
@@ -13,7 +13,7 @@
 }
 .transition-left {
    animation-name: move-left;
-   animation-duration: 5s;
+   animation-duration: 3s;
 }
 
 
@@ -23,7 +23,7 @@
 }
 .transition-right-laptop {
   animation-name: move-right-laptop;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 @keyframes move-left-laptop {
@@ -32,7 +32,7 @@
 }
 .transition-left-laptop {
  animation-name: move-left-laptop;
- animation-duration: 5s;
+ animation-duration: 3s;
 }
 
 @keyframes move-right-tablet {
@@ -41,7 +41,7 @@
 }
 .transition-right-tablet {
   animation-name: move-right-tablet;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 @keyframes move-left-tablet {
@@ -50,5 +50,5 @@
 }
 .transition-left-tablet {
  animation-name: move-left-tablet;
- animation-duration: 5s;
+ animation-duration: 3s;
 }
