@@ -6,4 +6,4 @@
 
 **Technologies**: HTML, CSS, SASS/SCSS, BEM, JavaScript, DOM Api/DOM Events, ESlint.
 
-**Slider link**: [link](https://maryiavarabyevaa.github.io/cssMemSlider/cssMemSlider/index.html).
+**Shelter link**: [link](https://maryiavarabyevaa.github.io/shelter/pages/main/index.html).
