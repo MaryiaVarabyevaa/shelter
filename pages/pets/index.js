@@ -171,7 +171,6 @@ popup.addEventListener("click", (event)=> {
 
 closeBtn.addEventListener("click", closePopup);
 
-
 /* popups */
 
 /* pagination */
@@ -181,10 +180,6 @@ const btnPrev = document.querySelectorAll(".btn-pets-direction")[1];
 const btnNum = document.querySelectorAll(".btn-pets-direction")[2];
 const btnNext = document.querySelectorAll(".btn-pets-direction")[3];
 const btnLast = document.querySelectorAll(".btn-pets-direction")[4];
-
-let imgs = document.querySelectorAll(".card-image");
-let titles = document.querySelectorAll(".card-title");
-let cards = document.querySelectorAll(".card-pet");
 
 let copyObject = pets.slice();
 let i = 0;
@@ -267,6 +262,10 @@ function createCards() {
 }
 
 createCards();
+
+let imgs = document.querySelectorAll(".card-image");
+let titles = document.querySelectorAll(".card-title");
+let cards = document.querySelectorAll(".card-pet");
 
 function changeNextCard() {
   if (+btnNum.innerHTML <= 7) {
